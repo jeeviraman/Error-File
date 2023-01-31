@@ -1,7 +1,10 @@
 package page_objects;
 
 import org.openqa.selenium.WebElement;
+
 import org.openqa.selenium.support.FindBy;
+
+import webdriver_manager.DriverManager;
 
 public class HomePage {
 
@@ -25,17 +28,17 @@ private static HomePage loginPageInstance;
 		
 	
 	@FindBy(className="btn") 
-	private WebElement btngetstarted;
+	 WebElement btngetstarted;
 	
 	public void btn_getstartedclick() {
 		
 		btngetstarted.click();
-		
+		System.out.println("user clicks get started button");
 	}
+	public String redirected_to_homepage() {
 	
-	//@FindBy(className="dropdown")
-	//private WebElement drpdowntoggle;
-	
-	
-	
+	String title = DriverManager.getDriver().getTitle();
+	return title;
+		
+}
 }

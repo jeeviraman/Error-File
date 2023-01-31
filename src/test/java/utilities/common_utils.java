@@ -30,12 +30,19 @@ public class common_utils {
 		Constants.USERNAME= properties.getProperty("USERNAME");
 		Constants.PASSWORD = properties.getProperty("PASSWORD");
 		
+		Constants.SIGNIN_URL = properties.getProperty("SIGNIN_URL");
+		Constants.HOMEPAGEURL = properties.getProperty("HOMEPAGEURL");
+		
+		
 	}
 	
 	//All the page class has to be initialized in this method
 		public void initWebElements()
 		{
 			PageFactory.initElements(DriverManager.getDriver(), HomePage.getInstance());
+			//	PageFactory.initElements(DriverManager.getDriver(), Linkedlistpage.getInstance());
+
 		}
+		
 
 }
